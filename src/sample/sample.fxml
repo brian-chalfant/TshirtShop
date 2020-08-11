@@ -1,0 +1,28 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<GridPane fx:id="root" fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="5" stylesheets="@tshirtshop.css">
+    <ImageView GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="CENTER">
+        <image>
+            <Image url="@Images/Kimo.png"/>
+        </image>
+    </ImageView>
+    <GridPane  fx:id="contentContainer" GridPane.rowIndex="2" GridPane.columnIndex="0">
+        <Label fx:id="quantityLabel" text="Quantity Ordered:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="quantityTextfield" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label fx:id="subtotalLabel" text="Subtotal: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="subtotalCostDisplay" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label fx:id="taxLabel" text="Tax: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="taxCostDisplay" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label fx:id="totalcostLabel" text="Total Cost: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="totalcostDisplay" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Button fx:id="clearButton" GridPane.columnIndex="0" GridPane.rowIndex="4" text="Clear" onAction="#clear"/>
+        <Button fx:id="submit" GridPane.rowIndex="4" disable="true" defaultButton="true" GridPane.columnIndex="1" text="Submit" onAction="#calculateCost"/>
+    </GridPane>
+    <Button fx:id="Quit" GridPane.rowIndex="3" GridPane.columnIndex="0" text="Quit" onAction="#quitProgram"/>
+</GridPane>
